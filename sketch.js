@@ -5,16 +5,12 @@ let video;
 let canvas;
 
 function setup() {
-  // Make canvas responsive to viewport size
-  const vw = Math.min(window.innerWidth, 430); // Max width for modern phones
-  const vh = Math.min(window.innerHeight, 932); // Max height for modern phones
-  canvas = createCanvas(vw, vh);
+  canvas = createCanvas(480, 360);
   canvas.id("canvas");
 
-  // Make video match canvas size
-  video = createCapture(VIDEO);
+  video = createCapture(VIDEO);// Creat the video: ビデオオブジェクトを作る
   video.id("video");
-  video.size(vw, vh);
+  video.size(width, height);
 
   const faceOptions = {
     withLandmarks: true,
